@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choachi Wild — Andean Expeditions</title>
+  <meta name="description" content="Private bio-expeditions through the Colombian Andes. Páramo, cloud forest, Muisca heritage, thermal springs. 2 Days / 1 Night from Bogotá." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="assets/logo.png" alt="Choachi Wild" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+        <span class="nav__logo-text">Choachi Wild</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#experience">The Experience</a></li>
+        <li><a href="#itinerary">Itinerary</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#book" class="nav__cta">Book Now</a></li>
+      </ul>
+      <button class="nav__burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="hero">
+    <div class="hero__media">
+      <img src="assets/hero.jpg" alt="Colombian Andes páramo landscape" class="hero__img" onerror="this.style.display='none'" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Colombia · Eastern Andes · 2 Days / 1 Night</p>
+      <h1 class="hero__title">Where the Cloud Forest<br><em>Meets the Sacred</em></h1>
+      <p class="hero__subtitle">Private expeditions through páramo, ancient Muisca land, and thermal springs — one hour from Bogotá, a world away from tourism.</p>
+      <div class="hero__actions">
+        <a href="#book" class="btn btn--primary">Book Your Expedition</a>
+        <a href="#experience" class="btn btn--ghost">Discover the Route</a>
+      </div>
+    </div>
+    <a href="#experience" class="hero__scroll" aria-label="Scroll down">
+      <span class="hero__scroll-line"></span>
+    </a>
+  </header>
+
+  <!-- INTRO STRIP -->
+  <section class="intro-strip">
+    <div class="intro-strip__inner">
+      <div class="intro-strip__stat">
+        <strong>3,400 m</strong>
+        <span>Above sea level</span>
+      </div>
+      <div class="intro-strip__divider"></div>
+      <div class="intro-strip__stat">
+        <strong>Private Land</strong>
+        <span>No crowds. Ever.</span>
+      </div>
+      <div class="intro-strip__divider"></div>
+      <div class="intro-strip__stat">
+        <strong>200 EUR</strong>
+        <span>All-inclusive per person</span>
+      </div>
+      <div class="intro-strip__divider"></div>
+      <div class="intro-strip__stat">
+        <strong>4%</strong>
+        <span>Of original Andean forest remains</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">The Experience</p>
+        <h2 class="section__title">Not a checklist of attractions.<br>A coherent journey.</h2>
+        <p class="section__desc">In two days you'll cross ecological zones that in Europe would take days of travel to experience — from freezing páramo mist to 38-degree geothermal water, from Muisca sacred sites to bonfire dinners under Andean stars.</p>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature__icon">
+            <img src="assets/icon-paramo.svg" alt="" onerror="this.outerHTML='<span class=\'feature__icon-fallback\'>🌿</span>'" />
+          </div>
+          <h3>Rarest Ecosystem on Earth</h3>
+          <p>The páramo only exists in the tropical Andes. Nowhere else. Walk among frailejones — living sponges that feed Bogotá's water supply — at 3,400 metres above sea level.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">
+            <img src="assets/icon-private.svg" alt="" onerror="this.outerHTML='<span class=\'feature__icon-fallback\'>🔒</span>'" />
+          </div>
+          <h3>Private Land Access</h3>
+          <p>RocaBlanca and Naranjalia are private. No tour buses. No queues. Just your group, the forest, and a guide who knows every tree by name.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">
+            <img src="assets/icon-muisca.svg" alt="" onerror="this.outerHTML='<span class=\'feature__icon-fallback\'>🗿</span>'" />
+          </div>
+          <h3>Living Pre-Columbian History</h3>
+          <p>Stand at El Guardián Indígena — the Muisca Indigenous Guardian — and at Laguna de Ubaque, a sacred lake connected to the El Dorado legend. This is Colombian prehistory, still alive.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">
+            <img src="assets/icon-food.svg" alt="" onerror="this.outerHTML='<span class=\'feature__icon-fallback\'>🍲</span>'" />
+          </div>
+          <h3>Gastronomy as Culture</h3>
+          <p>Changua, arepa de choclo, chocolate santafereño at altitude. Bonfire dinner under mountain stars. Traditional Cundiboyacense cooking that connects you to the place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL-BLEED QUOTE -->
+  <section class="pullquote" style="--bg: url('assets/rocablanca.jpg')">
+    <div class="pullquote__overlay"></div>
+    <blockquote class="pullquote__text">
+      "The water comes straight off the páramo we visited this morning, filtered through volcanic soil for months before emerging here. You can drink it straight."
+      <cite>— At Cascada del Chuscal, RocaBlanca</cite>
+    </blockquote>
+  </section>
+
+  <!-- ITINERARY -->
+  <section class="section itinerary" id="itinerary">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">The Route</p>
+        <h2 class="section__title">2 Days / 1 Night</h2>
+      </div>
+
+      <div class="itinerary__days">
+        <!-- DAY 1 -->
+        <div class="itinerary__day">
+          <div class="itinerary__day-header">
+            <div class="itinerary__day-media">
+              <img src="assets/day1.jpg" alt="Day 1 — Andean Ecosystem Immersion" onerror="this.parentElement.classList.add('no-img')" />
+              <div class="itinerary__day-badge">Day 1</div>
+            </div>
+          </div>
+          <div class="itinerary__day-content">
+            <h3>Andean Ecosystem Immersion</h3>
+            <div class="itinerary__stops">
+              <div class="stop">
+                <span class="stop__time">06:30</span>
+                <div class="stop__body">
+                  <strong>VIP Pickup</strong>
+                  <p>Private 4×4 collection from your hotel in Bogotá.</p>
+                </div>
+              </div>
+              <div class="stop">
+                <span class="stop__time">07:30</span>
+                <div class="stop__body">
+                  <strong>El Verjón Páramo</strong>
+                  <p>3,400 masl. Frailejones, cloud mist, the water source of a city of 8 million.</p>
+                </div>
+              </div>
+              <div class="stop">
+                <span class="stop__time">08:00</span>
+                <div class="stop__body">
+                  <strong>Peñas de la Bruja</strong>
+                  <p>The Witches' Rocks viewpoint — panoramic Eastern Cordillera.</p>
+                </div>
+              </div>
+              <div class="stop">
+                <span class="stop__time">08:30</span>
+                <div class="stop__body">
+                  <strong>Mountain Breakfast</strong>
+                  <p>Traditional Cundiboyacense: changua, arepa de choclo, hot chocolate santafereño.</p>
+                </div>
+              </div>
+              <div class="stop">
+                <span class="stop__time">09:30</span>
+                <div class="stop__body">
+                  <strong>RocaBlanca Expedition</strong>
+                  <p>3-hour hike on private land. El Guardián Indígena, giant anthuriums, siete cueros trees, Cascada del Chuscal.</p>
+                </div>
+              </div>
+              <div class="stop">
+                <span class="stop__time">14:15</span>
+                <div class="stop__body">
+                  <strong>Termales Santa Mónica</strong>
+                  <p>Natural geothermal springs. Páramo mist in the morning — 38°C water by afternoon.</p>
+                </div>
+              </div>
+              <div class="stop">
+                <span class="stop__time">18:30</span>
+                <div class="stop__body">
+                  <strong>Naranjalia — Overnight Refuge</strong>
+                  <p>Private mountain cabin. Bonfire dinner under the stars. Local ingredients, mountain silence.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAY 2 -->
+        <div class="itinerary__day itinerary__day--alt">
+          <div class="itinerary__day-header">
+            <div class="itinerary__day-media">
+              <img src="assets/day2.jpg" alt="Day 2 — Sacred Waters & White Villages" onerror="this.parentElement.classList.add('no-img')" />
+              <div class="itinerary__day-badge">Day 2</div>
+            </div>
+          </div>
+          <div class="itinerary__day-content">
+            <h3>Sacred Waters &amp; White Villages</h3>
+            <div class="itinerary__stops">
+              <div class="stop">
+                <span class="stop__time">06:00</span>
+                <div class="stop__body">
+                  <strong>Chingaza Sunrise</strong>
+                  <p>Watch the sun rise over the mountains of the natural reserve from Naranjalia.</p>
+                </div>
+              </div>
+              <div class="stop">
+                <span class="stop__time">09:00</span>
+                <div class="stop__body">
+                  <strong>Laguna de Ubaque</strong>
+                  <p>Sacred Muisca lake. Site of El Dorado legend. Over 1,000 years of spiritual history.</p>
+                </div>
+              </div>
+              <div class="stop">
+                <span class="stop__time">10:30</span>
+                <div class="stop__body">
+                  <strong>Fómeque</strong>
+                  <p>16th-century colonial white village. Coffee, church, daily Andean life — no tourist version.</p>
+                </div>
+              </div>
+              <div class="stop">
+                <span class="stop__time">11:30</span>
+                <div class="stop__body">
+                  <strong>Río Blanco + Suspension Bridge</strong>
+                  <p>Snowmelt river. Optional swim. You stood where this water was born — yesterday morning.</p>
+                </div>
+              </div>
+              <div class="stop">
+                <span class="stop__time">13:00</span>
+                <div class="stop__body">
+                  <strong>Closing Lunch at El Turista</strong>
+                  <p>Traditional Cundiboyacense cooking. Then private transfer back to Bogotá.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS GALLERY -->
+  <section class="section destinations" id="destinations">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Destinations</p>
+        <h2 class="section__title">One ecosystem.<br>Many worlds.</h2>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="gallery__item gallery__item--tall">
+        <img src="assets/paramo.jpg" alt="El Verjón Páramo" onerror="this.parentElement.classList.add('no-img')" />
+        <div class="gallery__caption">
+          <strong>El Verjón Páramo</strong>
+          <span>3,400 masl · Water factory for Bogotá</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img src="assets/rocablanca-hike.jpg" alt="RocaBlanca Cloud Forest" onerror="this.parentElement.classList.add('no-img')" />
+        <div class="gallery__caption">
+          <strong>RocaBlanca</strong>
+          <span>Private cloud forest · El Guardián Indígena</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img src="assets/termales.jpg" alt="Termales Santa Mónica" onerror="this.parentElement.classList.add('no-img')" />
+        <div class="gallery__caption">
+          <strong>Termales Santa Mónica</strong>
+          <span>Natural geothermal springs</span>
+        </div>
+      </div>
+      <div class="gallery__item gallery__item--wide">
+        <img src="assets/laguna-ubaque.jpg" alt="Laguna de Ubaque" onerror="this.parentElement.classList.add('no-img')" />
+        <div class="gallery__caption">
+          <strong>Laguna de Ubaque</strong>
+          <span>Sacred Muisca lake · El Dorado</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img src="assets/naranjalia.jpg" alt="Naranjalia Refuge" onerror="this.parentElement.classList.add('no-img')" />
+        <div class="gallery__caption">
+          <strong>Naranjalia</strong>
+          <span>Private overnight refuge</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHATS INCLUDED -->
+  <section class="section included">
+    <div class="container">
+      <div class="included__grid">
+        <div class="included__col">
+          <p class="section__label">All-Inclusive</p>
+          <h2 class="section__title">Everything taken care of.</h2>
+          <p>From the moment we collect you at your hotel, you don't need to think about logistics. Focus on the landscape.</p>
+          <a href="#book" class="btn btn--primary" style="margin-top:2rem">Reserve Your Spot</a>
+        </div>
+        <div class="included__col">
+          <ul class="checklist">
+            <li>Private 4×4 transport throughout</li>
+            <li>Expert bilingual guide (EN/ES)</li>
+            <li>All meals — breakfast, lunch, dinner</li>
+            <li>Overnight stay at Naranjalia</li>
+            <li>Termales Santa Mónica entry</li>
+            <li>Water and snacks on trail</li>
+            <li>Bonfire dinner with local ingredients</li>
+            <li>Small groups — maximum privacy</li>
+            <li>Medical assistance insurance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK SECTION -->
+  <section class="section book" id="book">
+    <div class="book__media">
+      <img src="assets/book-bg.jpg" alt="Andean landscape" onerror="this.style.display='none'" />
+      <div class="book__overlay"></div>
+    </div>
+    <div class="container book__content">
+      <div class="section__header section__header--light">
+        <p class="section__label">Ready?</p>
+        <h2 class="section__title">Book Your Expedition</h2>
+        <p class="section__desc">Private departures available year-round. Group sizes: 2–8 people. Starting from Bogotá.</p>
+      </div>
+      <form class="book__form" id="bookForm">
+        <div class="form__row">
+          <div class="form__group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests">
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+              <option value="6">6 guests</option>
+              <option value="7">7 guests</option>
+              <option value="8">8 guests</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="date">Preferred Dates</label>
+            <input type="text" id="date" name="date" placeholder="e.g. March 2026 or flexible" />
+          </div>
+        </div>
+        <div class="form__group">
+          <label for="message">Message (optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Any questions, special requirements, or context about your group..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Send Enquiry — 200 EUR / person</button>
+        <p class="form__note">We'll respond within 24 hours. No payment taken at this stage.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo">
+          <img src="assets/logo.png" alt="Choachi Wild" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+          <span class="nav__logo-text">Choachi Wild</span>
+        </a>
+        <p>Private bio-expeditions in the Colombian Andes.<br>1 hour from Bogotá.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#experience">The Experience</a></li>
+          <li><a href="#itinerary">Itinerary</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#book">Book</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contact</h4>
+        <p><a href="mailto:info@choachiwild.com">info@choachiwild.com</a></p>
+        <p>Choachí, Cundinamarca, Colombia</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Choachi Wild. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
