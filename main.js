@@ -144,7 +144,7 @@ modal.innerHTML = `
   <div class="modal__box">
     <p class="modal__label">Choachi Wild</p>
     <h2 class="modal__title">Coming Soon</h2>
-    <p class="modal__text">Online booking is on its way. In the meantime, reach us directly at <a href="mailto:info@choachiwild.com">info@choachiwild.com</a></p>
+    <p class="modal__text">Online booking is on its way. In the meantime, reach us directly at <a href="mailto:stevcruz@gmai.com">stevcruz@gmail.com</a></p>
     <button class="btn btn--primary modal__close">Got it</button>
   </div>
 `;
