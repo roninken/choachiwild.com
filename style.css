@@ -174,7 +174,8 @@ a { color: inherit; text-decoration: none; }
   font-size: .8rem;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: #f0dfa8;
+  text-shadow: 0 1px 6px rgba(0,0,0,.7), 0 0 20px rgba(0,0,0,.4);
   margin-bottom: 1.25rem;
 }
 .hero__title {
@@ -594,6 +595,28 @@ a { color: inherit; text-decoration: none; }
   padding: 1.25rem 1.5rem;
 }
 .footer__bottom p { font-size: .8rem; color: rgba(255,255,255,.3); }
+
+/* ── ROUTE MAP ── */
+.route-map {
+  position: relative;
+  width: 100%;
+  padding-bottom: 45%;
+  margin: 0 0 3.5rem;
+  border: 1px solid rgba(255,255,255,.08);
+  overflow: hidden;
+  min-height: 320px;
+}
+.route-map__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: invert(.9) hue-rotate(180deg) saturate(.7) brightness(.85);
+}
+@media (max-width: 600px) {
+  .route-map { padding-bottom: 75%; }
+}
 
 /* ── DATE PICKER ── */
 .date-picker { position: relative; }

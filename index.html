@@ -85,6 +85,16 @@
         <p class="section__desc">In two days you'll cross ecological zones that in Europe would take days of travel to experience — from freezing páramo mist to 38-degree geothermal water, from Muisca sacred sites to bonfire dinners under Andean stars.</p>
       </div>
 
+      <div class="route-map">
+        <iframe
+          class="route-map__iframe"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyB3pVYh55plFMnNz3kszdDwdMhyQR72CII&origin=4.602722,-74.061250&destination=4.520722,-73.909250&waypoints=4.528944,-73.922833&mode=driving&language=en">
+        </iframe>
+      </div>
+
       <div class="features">
         <div class="feature">
           <div class="feature__icon">
@@ -337,7 +347,7 @@
       <div class="section__header section__header--light">
         <p class="section__label">Ready?</p>
         <h2 class="section__title">Book Your Expedition</h2>
-        <p class="section__desc">Private departures available year-round. Group sizes: 2–8 people. Starting from Bogotá.</p>
+        <p class="section__desc">Private departures available year-round. Group sizes: 1–8 people. Starting from Bogotá.</p>
       </div>
       <form class="book__form" id="bookForm">
         <div class="form__row">
@@ -353,7 +363,8 @@
         <div class="form__row">
           <div class="form__group">
             <label for="guests">Number of Guests</label>
-            <select id="guests" name="guests">
+            <select id="guests" name="guests" required>
+              <option value="1">1 guest</option>
               <option value="2">2 guests</option>
               <option value="3">3 guests</option>
               <option value="4">4 guests</option>
