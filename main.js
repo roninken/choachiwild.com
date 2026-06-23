@@ -34,6 +34,31 @@ document.querySelectorAll('.feature, .stop, .gallery__item, .checklist li').forE
   observer.observe(el);
 });
 
+// ── Route map modal (mobile tap to expand)
+(function () {
+  const img = document.getElementById('routeMapImg');
+  if (!img) return;
+
+  const modal = document.createElement('div');
+  modal.id = 'routeMapModal';
+  modal.innerHTML = `
+    <div class="modal__backdrop"></div>
+    <div class="modal__box">
+      <button class="modal__close-btn" aria-label="Close">×</button>
+      <img src="assets/ChoachiWildeTrip.jpeg" alt="Expedition route map" />
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  function openMap() { modal.classList.add('modal--open'); document.body.style.overflow = 'hidden'; }
+  function closeMap() { modal.classList.remove('modal--open'); document.body.style.overflow = ''; }
+
+  img.addEventListener('click', () => { if (window.innerWidth <= 900) openMap(); });
+  modal.querySelector('.modal__backdrop').addEventListener('click', closeMap);
+  modal.querySelector('.modal__close-btn').addEventListener('click', closeMap);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMap(); });
+})();
+
 // ── Date Picker
 (function () {
   const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
