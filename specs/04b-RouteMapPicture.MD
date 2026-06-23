@@ -18,7 +18,6 @@
 - Remove the API key from source code
 - Keep the same placement as the previous map component
 - The picture must be visible on all devices
-- On mobile, tapping the picture expands it in a modal window
 
 ---
 
@@ -34,7 +33,7 @@ The Google Maps Embed API approach (spec 04) was replaced with a static image. T
 | `specs/04-GoogleMapsRoute.MD` | Renamed to `DEPRECATED-04-GoogleMapsRoute.MD` |
 | `index.html` | Replaced `<iframe>` with `<img id="routeMapImg" src="assets/ChoachiWildeTrip.jpeg">` — no API key |
 | `style.css` | Replaced iframe styles with image styles; added `#routeMapModal` modal styles |
-| `main.js` | Added route map modal IIFE — opens on mobile tap, closes on backdrop/Esc/× button |
+| `main.js` | No changes — modal removed |
 
 ### Verification
 
