@@ -776,6 +776,59 @@ a { color: inherit; text-decoration: none; }
 }
 .modal__text a { color: var(--color-gold); text-decoration: underline; }
 
+/* ── PHONE FIELD ── */
+.phone-field {
+  display: flex;
+}
+.phone-field__prefix {
+  flex-shrink: 0;
+  width: 110px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.15);
+  border-right: none;
+  color: var(--color-white);
+  padding: .8rem .6rem;
+  font-family: var(--font-sans);
+  font-size: .95rem;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.phone-field__prefix:focus { border-color: var(--color-gold); }
+.phone-field__prefix option { background: var(--color-dark); }
+.phone-field__number {
+  flex: 1;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.15);
+  border-left: none;
+  color: var(--color-white);
+  padding: .8rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color .2s;
+}
+.phone-field__number:focus,
+.phone-field:focus-within .phone-field__prefix { border-color: var(--color-gold); }
+.phone-field__number::placeholder { color: rgba(255,255,255,.3); }
+
+/* ── MODAL WHATSAPP FALLBACK ── */
+.modal__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: #25d366;
+  color: var(--color-dark) !important;
+  padding: .75rem 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  border-radius: 2px;
+  transition: background .2s;
+  cursor: pointer;
+}
+.modal__whatsapp:hover { background: #1ebe5d; }
+
 /* ── WHATSAPP BUTTON ── */
 .whatsapp-btn {
   position: fixed;

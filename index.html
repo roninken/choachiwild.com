@@ -358,9 +358,10 @@
       <div class="section__header section__header--light">
         <p class="section__label">Ready?</p>
         <h2 class="section__title">Book Your Expedition</h2>
-        <p class="section__desc">Private departures available year-round. Group sizes: 1–8 people. Starting from Bogotá.</p>
+        <p class="section__desc">Private departures available year-round. Group sizes: 1–4 people. Starting from Bogotá.</p>
       </div>
       <form class="book__form" id="bookForm">
+        <input type="hidden" name="access_key" value="e8bfa2ee-91dd-4355-aee9-a7171a53b0c0" />
         <div class="form__row">
           <div class="form__group">
             <label for="name">Full Name</label>
@@ -369,6 +370,15 @@
           <div class="form__group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__group form__group--phone">
+            <label for="phoneNumber">Contact Number (WhatsApp)</label>
+            <div class="phone-field">
+              <select id="phonePrefix" name="phone_prefix" class="phone-field__prefix" aria-label="Country code"></select>
+              <input type="tel" id="phoneNumber" name="phone_number" class="phone-field__number" placeholder="300 253 3146" required />
+            </div>
           </div>
         </div>
         <div class="form__row">
