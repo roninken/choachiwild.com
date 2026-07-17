@@ -10,7 +10,12 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-CSW7GY6B1Y');
+    var params = new URLSearchParams(window.location.search);
+    var origenTrafico = params.get('origin');
+
+    gtag('config', 'G-CSW7GY6B1Y', {
+      'origen_qr': origenTrafico
+    });
   </script>
   
   <meta charset="UTF-8" />
