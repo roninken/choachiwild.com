@@ -20,8 +20,8 @@
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Choachi Wild — Andean Expeditions</title>
-  <meta name="description" content="Private bio-expeditions through the Colombian Andes. Páramo, cloud forest, Muisca heritage, thermal springs. 2 Days / 1 Night from Bogotá." />
+  <title data-i18n="meta_title">Choachi Wild — Andean Expeditions</title>
+  <meta name="description" data-i18n-content="meta_description" content="Private bio-expeditions through the Colombian Andes. Páramo, cloud forest, Muisca heritage, thermal springs. 2 Days / 1 Night from Bogotá." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -36,34 +36,40 @@
         <img src="assets/logo.png" alt="Choachi Wild" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
         <span class="nav__logo-text">Choachi Wild</span>
       </a>
-      <ul class="nav__links">
-        <li><a href="#experience">The Experience</a></li>
-        <li><a href="#itinerary">Itinerary</a></li>
-        <li><a href="#destinations">Destinations</a></li>
-        <li><a href="#book" class="nav__cta">Book Now</a></li>
-      </ul>
-      <button class="nav__burger" id="navBurger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__right">
+        <ul class="nav__links">
+          <li><a href="#experience" data-i18n="nav_experience">The Experience</a></li>
+          <li><a href="#itinerary" data-i18n="nav_itinerary">Itinerary</a></li>
+          <li><a href="#destinations" data-i18n="nav_destinations">Destinations</a></li>
+          <li><a href="#book" class="nav__cta" data-i18n="nav_book">Book Now</a></li>
+        </ul>
+        <div class="lang-switch" id="langSwitch" role="group" aria-label="Language selector">
+          <button type="button" class="lang-switch__btn is-active" data-lang="en" aria-pressed="true">🇺🇸 EN</button>
+          <button type="button" class="lang-switch__btn" data-lang="es" aria-pressed="false">🇪🇸 ES</button>
+        </div>
+        <button class="nav__burger" id="navBurger" data-i18n-aria-label="nav_menu_aria" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- HERO -->
   <header class="hero" id="hero">
     <div class="hero__media">
-      <img src="assets/hero.jpg" alt="Colombian Andes páramo landscape" class="hero__img" onerror="this.style.display='none'" />
+      <img src="assets/hero.jpg" alt="Colombian Andes páramo landscape" data-i18n-alt="hero_img_alt" class="hero__img" onerror="this.style.display='none'" />
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__content">
-      <p class="hero__eyebrow">Colombia · Eastern Andes · 2 Days / 1 Night</p>
-      <h1 class="hero__title">Where the Cloud Forest<br><em>Meets the Sacred</em></h1>
-      <p class="hero__subtitle">Private expeditions through páramo, ancient Muisca land, and thermal springs — one hour from Bogotá, a world away from tourism.</p>
+      <p class="hero__eyebrow" data-i18n="hero_eyebrow">Colombia · Eastern Andes · 2 Days / 1 Night</p>
+      <h1 class="hero__title" data-i18n-html="hero_title_html">Where the Cloud Forest<br><em>Meets the Sacred</em></h1>
+      <p class="hero__subtitle" data-i18n="hero_subtitle">Private expeditions through páramo, ancient Muisca land, and thermal springs — one hour from Bogotá, a world away from tourism.</p>
       <div class="hero__actions">
-        <a href="#book" class="btn btn--primary">Book Your Expedition</a>
-        <a href="#experience" class="btn btn--ghost">Discover the Route</a>
+        <a href="#book" class="btn btn--primary" data-i18n="hero_cta_book">Book Your Expedition</a>
+        <a href="#experience" class="btn btn--ghost" data-i18n="hero_cta_discover">Discover the Route</a>
       </div>
     </div>
-    <a href="#experience" class="hero__scroll" aria-label="Scroll down">
+    <a href="#experience" class="hero__scroll" data-i18n-aria-label="hero_scroll_aria" aria-label="Scroll down">
       <span class="hero__scroll-line"></span>
     </a>
   </header>
@@ -73,17 +79,17 @@
     <div class="intro-strip__inner">
       <div class="intro-strip__stat">
         <strong>3,400 m</strong>
-        <span>Above sea level</span>
+        <span data-i18n="stat_altitude_label">Above sea level</span>
       </div>
       <div class="intro-strip__divider"></div>
       <div class="intro-strip__stat">
-        <strong>Private Land</strong>
-        <span>In Roca Blanca, no crowds. Ever.</span>
+        <strong data-i18n="stat_private_label">Private Land</strong>
+        <span data-i18n="stat_private_desc">In Roca Blanca, no crowds. Ever.</span>
       </div>
       <div class="intro-strip__divider"></div>
       <div class="intro-strip__stat">
-        <strong>All-inclusive</strong>
-        <span>All meals and accommodation included </span>
+        <strong data-i18n="stat_allinclusive_label">All-inclusive</strong>
+        <span data-i18n="stat_allinclusive_desc">All meals and accommodation included </span>
       </div>
       <div class="intro-strip__divider"></div>
     </div>
@@ -93,15 +99,16 @@
   <section class="section experience" id="experience">
     <div class="container">
       <div class="section__header">
-        <p class="section__label">The Experience</p>
-        <h2 class="section__title">Not a checklist of attractions.<br>A coherent journey.</h2>
-        <p class="section__desc">In two days you'll cross ecological zones that in Europe would take days of travel to experience — from freezing páramo mist to 38-degree geothermal water, from Muisca sacred sites to bonfire dinners under Andean stars.</p>
+        <p class="section__label" data-i18n="exp_label">The Experience</p>
+        <h2 class="section__title" data-i18n-html="exp_title_html">Not a checklist of attractions.<br>A coherent journey.</h2>
+        <p class="section__desc" data-i18n="exp_desc">In two days you'll cross ecological zones that in Europe would take days of travel to experience — from freezing páramo mist to 38-degree geothermal water, from Muisca sacred sites to bonfire dinners under Andean stars.</p>
       </div>
 
       <div class="route-map">
         <img
           src="assets/ChoachiWildeTrip.jpeg"
           alt="Choachi Wild expedition route map"
+          data-i18n-alt="route_map_alt"
           class="route-map__img"
           id="routeMapImg"
         />
@@ -112,29 +119,29 @@
           <div class="feature__icon">
             <img src="assets/icon-paramo.svg" alt="" onerror="this.outerHTML='<span class=\'feature__icon-fallback\'>🌿</span>'" />
           </div>
-          <h3>Rarest Ecosystem on Earth</h3>
-          <p>The páramo only exists in the tropical Andes. Nowhere else. Walk among frailejones — living sponges that feed Bogotá's water supply — at 3,400 metres above sea level.</p>
+          <h3 data-i18n="feature_paramo_title">Rarest Ecosystem on Earth</h3>
+          <p data-i18n="feature_paramo_desc">The páramo only exists in the tropical Andes. Nowhere else. Walk among frailejones — living sponges that feed Bogotá's water supply — at 3,400 metres above sea level.</p>
         </div>
         <div class="feature">
           <div class="feature__icon">
             <img src="assets/icon-private.svg" alt="" onerror="this.outerHTML='<span class=\'feature__icon-fallback\'>🔒</span>'" />
           </div>
-          <h3>Private Land Access</h3>
-          <p>RocaBlanca and Naranjalia are private. No tour buses. No queues. Just your group, the forest, and a guide.</p>
+          <h3 data-i18n="feature_private_title">Private Land Access</h3>
+          <p data-i18n="feature_private_desc">RocaBlanca and Naranjalia are private. No tour buses. No queues. Just your group, the forest, and a guide.</p>
         </div>
         <div class="feature">
           <div class="feature__icon">
             <img src="assets/icon-muisca.svg" alt="" onerror="this.outerHTML='<span class=\'feature__icon-fallback\'>🗿</span>'" />
           </div>
-          <h3>Living Pre-Columbian History</h3>
-          <p>Stand at El Guardián Indígena — the Muisca Indigenous Guardian — and at Laguna de Ubaque, a sacred lake connected to the El Dorado legend. This is Colombian prehistory, still alive.</p>
+          <h3 data-i18n="feature_muisca_title">Living Pre-Columbian History</h3>
+          <p data-i18n="feature_muisca_desc">Stand at El Guardián Indígena — the Muisca Indigenous Guardian — and at Laguna de Ubaque, a sacred lake connected to the El Dorado legend. This is Colombian prehistory, still alive.</p>
         </div>
         <div class="feature">
           <div class="feature__icon">
             <img src="assets/icon-food.svg" alt="" onerror="this.outerHTML='<span class=\'feature__icon-fallback\'>🍲</span>'" />
           </div>
-          <h3>Gastronomy as Culture</h3>
-          <p>Amasijos, arepa de ma&iacute;z, chocolate at altitude. Bonfire dinner under mountain stars. Traditional Cundiboyacense cooking that connects you to the place.</p>
+          <h3 data-i18n="feature_food_title">Gastronomy as Culture</h3>
+          <p data-i18n="feature_food_desc">Amasijos, arepa de ma&iacute;z, chocolate at altitude. Bonfire dinner under mountain stars. Traditional Cundiboyacense cooking that connects you to the place.</p>
         </div>
       </div>
     </div>
@@ -144,8 +151,8 @@
   <section class="pullquote" style="--bg: url('assets/rocablanca.jpg')">
     <div class="pullquote__overlay"></div>
     <blockquote class="pullquote__text">
-      "The water comes straight off the páramo we visited this morning, filtered through volcanic soil for months before emerging here."
-      <cite>— At Cascada del Chuscal, RocaBlanca</cite>
+      <span data-i18n="pullquote_text">"The water comes straight off the páramo we visited this morning, filtered through volcanic soil for months before emerging here."</span>
+      <cite data-i18n="pullquote_cite">— At Cascada del Chuscal, RocaBlanca</cite>
     </blockquote>
   </section>
 
@@ -153,8 +160,8 @@
   <section class="section itinerary" id="itinerary">
     <div class="container">
       <div class="section__header">
-        <p class="section__label">The Route</p>
-        <h2 class="section__title">2 Days / 1 Night</h2>
+        <p class="section__label" data-i18n="itinerary_label">The Route</p>
+        <h2 class="section__title" data-i18n="itinerary_title">2 Days / 1 Night</h2>
       </div>
 
       <div class="itinerary__days">
@@ -162,67 +169,67 @@
         <div class="itinerary__day">
           <div class="itinerary__day-header">
             <div class="itinerary__day-media">
-              <img src="assets/day1.jpg" alt="Day 1 — Andean Ecosystem Immersion" onerror="this.parentElement.classList.add('no-img')" />
-              <div class="itinerary__day-badge">Day 1</div>
+              <img src="assets/day1.jpg" alt="Day 1 — Andean Ecosystem Immersion" data-i18n-alt="day1_img_alt" onerror="this.parentElement.classList.add('no-img')" />
+              <div class="itinerary__day-badge" data-i18n="day1_badge">Day 1</div>
             </div>
           </div>
           <div class="itinerary__day-content">
-            <h3>Andean Ecosystem Immersion</h3>
+            <h3 data-i18n="day1_title">Andean Ecosystem Immersion</h3>
             <div class="itinerary__stops">
               <div class="stop">
                 <span class="stop__time">06:30</span>
                 <div class="stop__body">
-                  <strong>VIP Pickup</strong>
-                  <p>Private 4×4 collection from your hotel in Bogotá.</p>
+                  <strong data-i18n="stop_d1_1_title">VIP Pickup</strong>
+                  <p data-i18n="stop_d1_1_desc">Private 4×4 collection from your hotel in Bogotá.</p>
                 </div>
               </div>
               <div class="stop">
                 <span class="stop__time">07:30</span>
                 <div class="stop__body">
-                  <strong>El Verjón Páramo</strong>
-                  <p>3,400 masl. Frailejones, cloud mist, the water source of a city of 8 million.</p>
+                  <strong data-i18n="stop_d1_2_title">El Verjón Páramo</strong>
+                  <p data-i18n="stop_d1_2_desc">3,400 masl. Frailejones, cloud mist, the water source of a city of 8 million.</p>
                 </div>
               </div>
               <div class="stop">
                 <span class="stop__time">08:00</span>
                 <div class="stop__body">
-                  <strong>Peñas de la Bruja</strong>
-                  <p>The Witches' Rocks viewpoint — panoramic Eastern Cordillera.</p>
+                  <strong data-i18n="stop_d1_3_title">Peñas de la Bruja</strong>
+                  <p data-i18n="stop_d1_3_desc">The Witches' Rocks viewpoint — panoramic Eastern Cordillera.</p>
                 </div>
               </div>
               <div class="stop">
                 <span class="stop__time">08:30</span>
                 <div class="stop__body">
-                  <strong>Mountain Breakfast</strong>
-                  <p>Traditional Cundiboyacense: Amasijos, hot chocolate.</p>
+                  <strong data-i18n="stop_d1_4_title">Mountain Breakfast</strong>
+                  <p data-i18n="stop_d1_4_desc">Traditional Cundiboyacense: Amasijos, hot chocolate.</p>
                 </div>
               </div>
               <div class="stop">
                 <span class="stop__time">09:30</span>
                 <div class="stop__body">
-                  <strong>RocaBlanca Expedition</strong>
-                  <p>3-hour hike through high Andean cloud forest on Private Land. El Guardián Indígena, giant anthuriums, siete cueros trees, Cascada del Chuscal.</p>
+                  <strong data-i18n="stop_d1_5_title">RocaBlanca Expedition</strong>
+                  <p data-i18n="stop_d1_5_desc">3-hour hike through high Andean cloud forest on Private Land. El Guardián Indígena, giant anthuriums, siete cueros trees, Cascada del Chuscal.</p>
                 </div>
               </div>
               <div class="stop">
                 <span class="stop__time">13:00</span>
                 <div class="stop__body">
-                  <strong>Local Lunch</strong>
-                  <p>Traditional lunch on a typical restaurant on the road (one of the bests!).</p>
+                  <strong data-i18n="stop_d1_6_title">Local Lunch</strong>
+                  <p data-i18n="stop_d1_6_desc">Traditional lunch on a typical restaurant on the road (one of the bests!).</p>
                 </div>
               </div>
               <div class="stop">
                 <span class="stop__time">14:15</span>
                 <div class="stop__body">
-                  <strong>Termales Santa Mónica</strong>
-                  <p>Natural geothermal springs. Páramo mist in the morning — 38°C water by afternoon.</p>
+                  <strong data-i18n="stop_d1_7_title">Termales Santa Mónica</strong>
+                  <p data-i18n="stop_d1_7_desc">Natural geothermal springs. Páramo mist in the morning — 38°C water by afternoon.</p>
                 </div>
               </div>
               <div class="stop">
                 <span class="stop__time">18:30</span>
                 <div class="stop__body">
-                  <strong>Naranjalia — Overnight Refuge</strong>
-                  <p>Private mountain cabin. Bonfire dinner under the stars. Mountain silence.</p>
+                  <strong data-i18n="stop_d1_8_title">Naranjalia — Overnight Refuge</strong>
+                  <p data-i18n="stop_d1_8_desc">Private mountain cabin. Bonfire dinner under the stars. Mountain silence.</p>
                 </div>
               </div>
             </div>
@@ -233,46 +240,46 @@
         <div class="itinerary__day itinerary__day--alt">
           <div class="itinerary__day-header">
             <div class="itinerary__day-media">
-              <img src="assets/day2.jpg" alt="Day 2 — Sacred Waters & White Villages" onerror="this.parentElement.classList.add('no-img')" />
-              <div class="itinerary__day-badge">Day 2</div>
+              <img src="assets/day2.jpg" alt="Day 2 — Sacred Waters & White Villages" data-i18n-alt="day2_img_alt" onerror="this.parentElement.classList.add('no-img')" />
+              <div class="itinerary__day-badge" data-i18n="day2_badge">Day 2</div>
             </div>
           </div>
           <div class="itinerary__day-content">
-            <h3>Sacred Waters &amp; White Villages</h3>
+            <h3 data-i18n="day2_title">Sacred Waters &amp; White Villages</h3>
             <div class="itinerary__stops">
               <div class="stop">
                 <span class="stop__time">06:00</span>
                 <div class="stop__body">
-                  <strong>Chingaza Sunrise</strong>
-                  <p>Watch the sun rise over the mountains of the natural reserve from Naranjalia.</p>
+                  <strong data-i18n="stop_d2_1_title">Chingaza Sunrise</strong>
+                  <p data-i18n="stop_d2_1_desc">Watch the sun rise over the mountains of the natural reserve from Naranjalia.</p>
                 </div>
               </div>
               <div class="stop">
                 <span class="stop__time">09:00</span>
                 <div class="stop__body">
-                  <strong>Laguna de Ubaque</strong>
-                  <p>Sacred Muisca lake. Site of El Dorado legend. Over 1,000 years of spiritual history.</p>
+                  <strong data-i18n="stop_d2_2_title">Laguna de Ubaque</strong>
+                  <p data-i18n="stop_d2_2_desc">Sacred Muisca lake. Site of El Dorado legend. Over 1,000 years of spiritual history.</p>
                 </div>
               </div>
               <div class="stop">
                 <span class="stop__time">10:30</span>
                 <div class="stop__body">
-                  <strong>Fómeque</strong>
-                  <p>16th-century colonial white village. Coffee, church, daily Andean life — no tourist version.</p>
+                  <strong data-i18n="stop_d2_3_title">Fómeque</strong>
+                  <p data-i18n="stop_d2_3_desc">16th-century colonial white village. Coffee, church, daily Andean life — no tourist version.</p>
                 </div>
               </div>
               <div class="stop">
                 <span class="stop__time">11:30</span>
                 <div class="stop__body">
-                  <strong>Río Blanco + Suspension Bridge</strong>
-                  <p>River that originates from The páramo. Optional swim. You stood where this water was born — yesterday morning.</p>
+                  <strong data-i18n="stop_d2_4_title">Río Blanco + Suspension Bridge</strong>
+                  <p data-i18n="stop_d2_4_desc">River that originates from The páramo. Optional swim. You stood where this water was born — yesterday morning.</p>
                 </div>
               </div>
               <div class="stop">
                 <span class="stop__time">13:00</span>
                 <div class="stop__body">
-                  <strong>Closing Lunch at local restaurant</strong>
-                  <p>Traditional Cundiboyacense cooking. Then private transfer back to Bogotá.</p>
+                  <strong data-i18n="stop_d2_5_title">Closing Lunch at local restaurant</strong>
+                  <p data-i18n="stop_d2_5_desc">Traditional Cundiboyacense cooking. Then private transfer back to Bogotá.</p>
                 </div>
               </div>
             </div>
@@ -286,44 +293,44 @@
   <section class="section destinations" id="destinations">
     <div class="container">
       <div class="section__header">
-        <p class="section__label">Destinations</p>
-        <h2 class="section__title">One ecosystem.<br>Many worlds.</h2>
+        <p class="section__label" data-i18n="dest_label">Destinations</p>
+        <h2 class="section__title" data-i18n-html="dest_title_html">One ecosystem.<br>Many worlds.</h2>
       </div>
     </div>
     <div class="gallery">
       <div class="gallery__item gallery__item--tall">
-        <img src="assets/paramo.jpg" alt="El Verjón Páramo" onerror="this.parentElement.classList.add('no-img')" />
+        <img src="assets/paramo.jpg" alt="El Verjón Páramo" data-i18n-alt="gallery_paramo_alt" onerror="this.parentElement.classList.add('no-img')" />
         <div class="gallery__caption">
-          <strong>El Verjón Páramo</strong>
-          <span>3,400 masl · Water factory for Bogotá</span>
+          <strong data-i18n="gallery_paramo_title">El Verjón Páramo</strong>
+          <span data-i18n="gallery_paramo_desc">3,400 masl · Water factory for Bogotá</span>
         </div>
       </div>
       <div class="gallery__item">
-        <img src="assets/rocablanca-hike.jpg" alt="RocaBlanca Cloud Forest" onerror="this.parentElement.classList.add('no-img')" />
+        <img src="assets/rocablanca-hike.jpg" alt="RocaBlanca Cloud Forest" data-i18n-alt="gallery_rocablanca_alt" onerror="this.parentElement.classList.add('no-img')" />
         <div class="gallery__caption">
-          <strong>RocaBlanca</strong>
-          <span>Private cloud forest · El Guardián Indígena</span>
+          <strong data-i18n="gallery_rocablanca_title">RocaBlanca</strong>
+          <span data-i18n="gallery_rocablanca_desc">Private cloud forest · El Guardián Indígena</span>
         </div>
       </div>
       <div class="gallery__item">
-        <img src="assets/termales.jpg" alt="Termales Santa Mónica" onerror="this.parentElement.classList.add('no-img')" />
+        <img src="assets/termales.jpg" alt="Termales Santa Mónica" data-i18n-alt="gallery_termales_alt" onerror="this.parentElement.classList.add('no-img')" />
         <div class="gallery__caption">
-          <strong>Termales Santa Mónica</strong>
-          <span>Natural geothermal springs</span>
+          <strong data-i18n="gallery_termales_title">Termales Santa Mónica</strong>
+          <span data-i18n="gallery_termales_desc">Natural geothermal springs</span>
         </div>
       </div>
       <div class="gallery__item gallery__item--wide">
-        <img src="assets/laguna-ubaque.jpg" alt="Laguna de Ubaque" onerror="this.parentElement.classList.add('no-img')" />
+        <img src="assets/laguna-ubaque.jpg" alt="Laguna de Ubaque" data-i18n-alt="gallery_laguna_alt" onerror="this.parentElement.classList.add('no-img')" />
         <div class="gallery__caption">
-          <strong>Laguna de Ubaque</strong>
-          <span>Sacred Muisca lake · El Dorado</span>
+          <strong data-i18n="gallery_laguna_title">Laguna de Ubaque</strong>
+          <span data-i18n="gallery_laguna_desc">Sacred Muisca lake · El Dorado</span>
         </div>
       </div>
       <div class="gallery__item">
-        <img src="assets/naranjalia.jpg" alt="Naranjalia Refuge" onerror="this.parentElement.classList.add('no-img')" />
+        <img src="assets/naranjalia.jpg" alt="Naranjalia Refuge" data-i18n-alt="gallery_naranjalia_alt" onerror="this.parentElement.classList.add('no-img')" />
         <div class="gallery__caption">
-          <strong>Naranjalia</strong>
-          <span>Private overnight refuge</span>
+          <strong data-i18n="gallery_naranjalia_title">Naranjalia</strong>
+          <span data-i18n="gallery_naranjalia_desc">Private overnight refuge</span>
         </div>
       </div>
     </div>
@@ -334,22 +341,22 @@
     <div class="container">
       <div class="included__grid">
         <div class="included__col">
-          <p class="section__label">All-Inclusive</p>
-          <h2 class="section__title">Everything taken care of.</h2>
-          <p>From the moment we collect you at your hotel, you don't need to think about logistics. Focus on the landscape.</p>
-          <a href="#book" class="btn btn--primary" style="margin-top:2rem">Reserve Your Spot <BR/>260 EUR / 290 USD</a>
+          <p class="section__label" data-i18n="included_label">All-Inclusive</p>
+          <h2 class="section__title" data-i18n="included_title">Everything taken care of.</h2>
+          <p data-i18n="included_desc">From the moment we collect you at your hotel, you don't need to think about logistics. Focus on the landscape.</p>
+          <a href="#book" class="btn btn--primary" data-i18n-html="included_cta_html" style="margin-top:2rem">Reserve Your Spot <BR/>260 EUR / 290 USD</a>
         </div>
         <div class="included__col">
           <ul class="checklist">
-            <li>Private 4×4 transport throughout</li>
-            <li>Exclusive guide</li>
-            <li>All meals — breakfast, lunch, dinner</li>
-            <li>Overnight stay at Naranjalia</li>
-            <li>Termales Santa Mónica entry</li>
-            <li>Water and snacks on trail</li>
-            <li>Bonfire dinner</li>
-            <li>Small groups — maximum privacy</li>
-            <li>Medical assistance insurance</li>
+            <li data-i18n="included_1">Private 4×4 transport throughout</li>
+            <li data-i18n="included_2">Exclusive guide</li>
+            <li data-i18n="included_3">All meals — breakfast, lunch, dinner</li>
+            <li data-i18n="included_4">Overnight stay at Naranjalia</li>
+            <li data-i18n="included_5">Termales Santa Mónica entry</li>
+            <li data-i18n="included_6">Water and snacks on trail</li>
+            <li data-i18n="included_7">Bonfire dinner</li>
+            <li data-i18n="included_8">Small groups — maximum privacy</li>
+            <li data-i18n="included_9">Medical assistance insurance</li>
           </ul>
         </div>
       </div>
@@ -359,44 +366,44 @@
   <!-- BOOK SECTION -->
   <section class="section book" id="book">
     <div class="book__media">
-      <img src="assets/book-bg.jpg" alt="Andean landscape" onerror="this.style.display='none'" />
+      <img src="assets/book-bg.jpg" alt="Andean landscape" data-i18n-alt="book_img_alt" onerror="this.style.display='none'" />
       <div class="book__overlay"></div>
     </div>
     <div class="container book__content">
       <div class="section__header section__header--light">
-        <p class="section__label">Ready?</p>
-        <h2 class="section__title">Book Your Expedition</h2>
-        <p class="section__desc">Private departures available year-round. Group sizes: 1–4 people. Starting from Bogotá.</p>
+        <p class="section__label" data-i18n="book_label">Ready?</p>
+        <h2 class="section__title" data-i18n="book_title">Book Your Expedition</h2>
+        <p class="section__desc" data-i18n="book_desc">Private departures available year-round. Group sizes: 1–4 people. Starting from Bogotá.</p>
       </div>
       <form class="book__form" id="bookForm">
         <input type="hidden" name="access_key" value="e8bfa2ee-91dd-4355-aee9-a7171a53b0c0" />
         <div class="form__row">
           <div class="form__group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <label for="name" data-i18n="form_name_label">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" data-i18n-placeholder="form_name_placeholder" required />
           </div>
           <div class="form__group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            <label for="email" data-i18n="form_email_label">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" data-i18n-placeholder="form_email_placeholder" required />
           </div>
         </div>
         <div class="form__row">
           <div class="form__group form__group--phone">
-            <label for="phoneNumber">Contact Number (WhatsApp)</label>
+            <label for="phoneNumber" data-i18n="form_phone_label">Contact Number (WhatsApp)</label>
             <div class="phone-field">
-              <select id="phonePrefix" name="phone_prefix" class="phone-field__prefix" aria-label="Country code"></select>
-              <input type="tel" id="phoneNumber" name="phone_number" class="phone-field__number" placeholder="300 253 3146" required />
+              <select id="phonePrefix" name="phone_prefix" class="phone-field__prefix" aria-label="Country code" data-i18n-aria-label="phone_prefix_aria"></select>
+              <input type="tel" id="phoneNumber" name="phone_number" class="phone-field__number" placeholder="300 253 3146" data-i18n-placeholder="form_phone_placeholder" required />
             </div>
           </div>
         </div>
         <div class="form__row">
           <div class="form__group">
-            <label for="guests">Number of Guests</label>
+            <label for="guests" data-i18n="form_guests_label">Number of Guests</label>
             <select id="guests" name="guests" required>
-              <option value="1">1 guest</option>
-              <option value="2">2 guests</option>
-              <option value="3">3 guests</option>
-              <option value="4">4 guests</option>
+              <option value="1" data-i18n="guests_opt_1">1 guest</option>
+              <option value="2" data-i18n="guests_opt_2">2 guests</option>
+              <option value="3" data-i18n="guests_opt_3">3 guests</option>
+              <option value="4" data-i18n="guests_opt_4">4 guests</option>
               <!-- <option value="5">5 guests</option>
               <option value="6">6 guests</option>
               <option value="7">7 guests</option>
@@ -404,20 +411,20 @@
             </select>
           </div>
           <div class="form__group">
-            <label for="date">Preferred Dates</label>
+            <label for="date" data-i18n="form_date_label">Preferred Dates</label>
             <div class="date-picker" id="datePicker">
-              <input type="text" id="date" class="date-picker__display" placeholder="Select your dates" readonly />
+              <input type="text" id="date" class="date-picker__display" placeholder="Select your dates" data-i18n-placeholder="form_date_placeholder" readonly />
               <input type="hidden" name="date" id="dateValue" />
               <div class="date-picker__popup" id="datePopup" aria-hidden="true"></div>
             </div>
           </div>
         </div>
         <div class="form__group">
-          <label for="message">Message (optional)</label>
-          <textarea id="message" name="message" rows="3" placeholder="Any questions, special requirements, or context about your group..."></textarea>
+          <label for="message" data-i18n="form_message_label">Message (optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Any questions, special requirements, or context about your group..." data-i18n-placeholder="form_message_placeholder"></textarea>
         </div>
-        <button type="submit" class="btn btn--primary btn--full">Send Enquiry <BR/> (260 EUR / 290 USD) / person</button>
-        <p class="form__note">We'll respond within 24 hours. No payment taken at this stage.</p>
+        <button type="submit" class="btn btn--primary btn--full" data-i18n-html="book_submit_html">Send Enquiry <BR/> (260 EUR / 290 USD) / person</button>
+        <p class="form__note" data-i18n="book_note">We'll respond within 24 hours. No payment taken at this stage.</p>
       </form>
     </div>
   </section>
@@ -430,31 +437,32 @@
           <img src="assets/logo.png" alt="Choachi Wild" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
           <span class="nav__logo-text">Choachi Wild</span>
         </a>
-        <p>Private bio-expeditions in the Colombian Andes.<br>1 hour from Bogotá.</p>
+        <p data-i18n-html="footer_tagline_html">Private bio-expeditions in the Colombian Andes.<br>1 hour from Bogotá.</p>
       </div>
       <div class="footer__links">
-        <h4>Explore</h4>
+        <h4 data-i18n="footer_explore_label">Explore</h4>
         <ul>
-          <li><a href="#experience">The Experience</a></li>
-          <li><a href="#itinerary">Itinerary</a></li>
-          <li><a href="#destinations">Destinations</a></li>
-          <li><a href="#book">Book</a></li>
+          <li><a href="#experience" data-i18n="nav_experience">The Experience</a></li>
+          <li><a href="#itinerary" data-i18n="nav_itinerary">Itinerary</a></li>
+          <li><a href="#destinations" data-i18n="nav_destinations">Destinations</a></li>
+          <li><a href="#book" data-i18n="footer_book_link">Book</a></li>
         </ul>
       </div>
       <div class="footer__contact">
-        <h4>Contact</h4>
+        <h4 data-i18n="footer_contact_label">Contact</h4>
         <p><a href="mailto:info@choachiwild.com">info@choachiwild.com</a></p>
         <p>Choachí, Cundinamarca, Colombia</p>
         <div class="footer__social">
-          <a href="https://www.instagram.com/choachi_wild/" aria-label="Instagram" target="_blank"><img src="assets/Instagram_icon.png"/></a>
+          <a href="https://www.instagram.com/choachi_wild/" aria-label="Instagram" data-i18n-aria-label="footer_instagram_aria" target="_blank"><img src="assets/Instagram_icon.png"/></a>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2026 Choachi Wild. All rights reserved.</p>
+      <p data-i18n="footer_copyright">© 2026 Choachi Wild. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="main.js"></script>
 
   <!-- WhatsApp floating button -->
@@ -464,6 +472,7 @@
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Chat on WhatsApp"
+    data-i18n-aria-label="whatsapp_aria"
   >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>

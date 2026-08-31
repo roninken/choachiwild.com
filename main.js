@@ -184,8 +184,7 @@ document.querySelectorAll('.feature, .stop, .gallery__item, .checklist li').forE
 
 // ── Date Picker
 (function () {
-  const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-  const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function locale() { return window.ChoachiI18n.dateLocale[window.ChoachiI18n.getLang()]; }
 
   const picker   = document.getElementById('datePicker');
   const display  = document.getElementById('date');
@@ -207,10 +206,12 @@ document.querySelectorAll('.feature, .stop, .gallery__item, .checklist li').forE
 
   function formatRange(s, e) {
     const opts = { weekday:'short', day:'numeric', month:'short', year:'numeric' };
-    return s.toLocaleDateString('en-GB', opts) + ' – ' + e.toLocaleDateString('en-GB', opts);
+    const loc = locale().locale;
+    return s.toLocaleDateString(loc, opts) + ' – ' + e.toLocaleDateString(loc, opts);
   }
 
   function render() {
+    const { days: DAYS, months: MONTHS } = locale();
     const endDate = startDate ? addDays(startDate, 1) : null;
     const firstDay = new Date(viewYear, viewMonth, 1).getDay();
     const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
@@ -219,9 +220,9 @@ document.querySelectorAll('.feature, .stop, .gallery__item, .checklist li').forE
 
     popup.innerHTML = `
       <div class="dp-header">
-        <button class="dp-nav" id="dpPrev" aria-label="Previous month" ${isPrevDisabled ? 'disabled' : ''}>&#8249;</button>
+        <button class="dp-nav" id="dpPrev" aria-label="${window.ChoachiI18n.t('date_picker_prev')}" ${isPrevDisabled ? 'disabled' : ''}>&#8249;</button>
         <span class="dp-header__title">${MONTHS[viewMonth]} ${viewYear}</span>
-        <button class="dp-nav" id="dpNext" aria-label="Next month">&#8250;</button>
+        <button class="dp-nav" id="dpNext" aria-label="${window.ChoachiI18n.t('date_picker_next')}">&#8250;</button>
       </div>
       <div class="dp-weekdays">${DAYS.map(d => `<span>${d}</span>`).join('')}</div>
       <div class="dp-grid" id="dpGrid">
@@ -238,7 +239,7 @@ document.querySelectorAll('.feature, .stop, .gallery__item, .checklist li').forE
           return `<div class="${cls}" data-date="${d.toISOString()}">${i + 1}</div>`;
         }).join('')}
       </div>
-      <p class="dp-note">Select arrival day — departure is Day 2</p>
+      <p class="dp-note">${window.ChoachiI18n.t('date_picker_note')}</p>
     `;
 
     document.getElementById('dpPrev').addEventListener('click', (e) => {
@@ -283,6 +284,15 @@ document.querySelectorAll('.feature, .stop, .gallery__item, .checklist li').forE
     if (!picker.contains(e.target)) close();
   });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+  document.addEventListener('cw:langchange', () => {
+    if (startDate) {
+      const label = formatRange(startDate, addDays(startDate, 1));
+      display.value = label;
+      hidden.value  = label;
+    }
+    if (popup.classList.contains('open')) render();
+  });
 })();
 
 // ── Coming Soon Modal
@@ -292,12 +302,13 @@ modal.innerHTML = `
   <div class="modal__backdrop"></div>
   <div class="modal__box">
     <p class="modal__label">Choachi Wild</p>
-    <h2 class="modal__title">Coming Soon</h2>
-    <p class="modal__text">Online booking is on its way. In the meantime, reach us directly at <a href="mailto:info@choachiwild.com">info@choachiwild.com</a></p>
-    <button class="btn btn--primary modal__close">Got it</button>
+    <h2 class="modal__title" data-i18n="modal_coming_soon_title">Coming Soon</h2>
+    <p class="modal__text" data-i18n-html="modal_coming_soon_text_html">Online booking is on its way. In the meantime, reach us directly at <a href="mailto:info@choachiwild.com">info@choachiwild.com</a></p>
+    <button class="btn btn--primary modal__close" data-i18n="modal_close">Got it</button>
   </div>
 `;
 document.body.appendChild(modal);
+window.ChoachiI18n.translate(modal);
 
 function openModal() {
   modal.classList.add('modal--open');
@@ -322,7 +333,7 @@ document.getElementById('bookForm').addEventListener('submit', async (e) => {
 
   // Disable button while sending
   btn.disabled = true;
-  btn.innerHTML = 'Sending…';
+  btn.innerHTML = window.ChoachiI18n.t('btn_sending');
 
   // Collect form data as JSON
   const data = Object.fromEntries(new FormData(form));
@@ -350,21 +361,21 @@ document.getElementById('bookForm').addEventListener('submit', async (e) => {
   const close = modal.querySelector('.modal__close');
 
   if (success) {
-    title.textContent = 'Enquiry Sent!';
-    text.innerHTML    = 'Your enquiry was sent successfully. We will contact you as soon as possible.';
-    close.textContent = 'Got it';
+    title.textContent = window.ChoachiI18n.t('modal_success_title');
+    text.innerHTML    = window.ChoachiI18n.t('modal_success_text');
+    close.textContent = window.ChoachiI18n.t('modal_close');
     close.className   = 'btn btn--primary modal__close';
     form.reset();
   } else {
-    title.textContent = 'Something went wrong';
-    text.innerHTML    = 'Ups, sorry but our mail service is broken, if you want you can contact us directly by WhatsApp';
+    title.textContent = window.ChoachiI18n.t('modal_error_title');
+    text.innerHTML    = window.ChoachiI18n.t('modal_error_text');
     close.outerHTML   = `<a href="https://wa.me/573002533146?text=Choachi%20Wild%2C%20I%20have%20this%20question%3A%20"
       target="_blank" rel="noopener noreferrer" class="modal__whatsapp modal__close">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
         <path d="M12 0C5.373 0 0 5.373 0 12c0 2.128.558 4.121 1.533 5.847L.057 23.882a.5.5 0 0 0 .609.61l6.098-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.013-1.376l-.36-.214-3.724.976.994-3.62-.235-.373A9.818 9.818 0 1 1 12 21.818z"/>
       </svg>
-      Open WhatsApp
+      ${window.ChoachiI18n.t('modal_whatsapp_cta')}
     </a>`;
     // Re-bind close for the new element
     modal.querySelector('.modal__close').addEventListener('click', closeModal);
